@@ -27,13 +27,16 @@ First you'll need a table to store the errors.  By default, it will be named Log
 
 ### Powershell Script
 **Configuration changes to the script are required** 
+
 Briefly, the Powershell Script searches the Application Event Log for Aptify related errors.  It then parses each error into more specific fields of information and sends it to the Log_Aptify table.
 
 ### Windows Scheduled Task
 **Configuration changes to the script are required** 
+
 Create a Windows Scheduled Tasks that runs the script on an hourly basis. I have included a Scheduled Task XML File that you can import. Be sure to update the ```<WorkingDirectory>``` to the location of the PowerShell script prior to the import.  Additionally, you will need to update the username/password that has privliges to run the script after the initial import.
 
 ### SQL Job
 **Configuration changes to the script are required** 
+
 The SQL Job summarizes the errors collected during a specific hour.  We receive a multitude of errors, so by default I am summarizing by Error Type to reduce the size of the email.  However, you can easily update the script to display every error that comes in if desired.  I recommend making the SQL Job Schedule on the hour, and run the Windows Scheduled Tasks at the :55s.  Example. Windows Scheduled Tasks at the 5:55 PM, SQL Jobs at the 6:00 PM.  The SQL Job script is included in the repository.    
 
