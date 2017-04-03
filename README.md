@@ -40,3 +40,10 @@ Create a Windows Scheduled Tasks that runs the script on an hourly basis. I have
 
 The SQL Job summarizes the errors collected during a specific hour.  We receive a multitude of errors, so by default I am summarizing by Error Type to reduce the size of the email.  However, you can easily update the script to display every error that comes in if desired.  I recommend making the SQL Job Schedule on the hour, and run the Windows Scheduled Tasks at the :55s.  Example. Windows Scheduled Tasks at the 5:55 PM, SQL Jobs at the 6:00 PM.  The SQL Job script is included in the repository.    
 
+![Table Sample][table_sample]
+
+![Email Sample][email_sample]
+
+
+[email_sample]: /Log_Aptify_Email.png "Example of Generated Email"
+[table_sample]: /Log_Aptify_Table.png "Example of Table Results"
